@@ -3,11 +3,14 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import ErrorBoundary from './components/ErrorBoundary.tsx'
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Routes } from 'react-router-dom'
-import Layout from "./Layout.tsx";
-import router from './routes/router.ts'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<App />
+  }
+])
 
 
 createRoot(document.getElementById('root')!).render(
