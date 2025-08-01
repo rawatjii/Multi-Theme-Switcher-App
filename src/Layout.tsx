@@ -1,13 +1,15 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
 
-const App:React.FC = ()=>{
+function Layout() {
 
   return (
     <>
       <Header />
+      <Outlet/>
     </>
   )
 }
 
-export default App
+export default Layout;
